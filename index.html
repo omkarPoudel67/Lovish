@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IRONVAULT — BUILT FOR THE GRIND. | Premium Gym Accessories Nepal</title>
+<meta name="description" content="Premium gym & fitness accessories engineered for your everyday grind. Fast delivery across Nepal.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230B0B0C'/><path d='M8 13v6M12 10v12M20 10v12M24 13v6M12 16h8' stroke='%23C8FF3D' stroke-width='2.4' stroke-linecap='round'/></svg>">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        vault: { 950:'#0B0B0C', 900:'#111113', 800:'#18181B', 700:'#232327', 600:'#2E2E33' },
+        lime: { DEFAULT:'#C8FF3D', dim:'#9EDB1F' }
+      },
+      fontFamily: {
+        display: ['"Bebas Neue"','sans-serif'],
+        body: ['Inter','sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --lime:#C8FF3D; }
+  * { -webkit-tap-highlight-color: transparent; }
+  body { background:#0B0B0C; color:#F4F4F2; font-family:'Inter',sans-serif; }
+  ::selection { background:#C8FF3D; color:#0B0B0C; }
+  ::-webkit-scrollbar { width:9px; height:9px; }
+  ::-webkit-scrollbar-track { background:#0B0B0C; }
+  ::-webkit-scrollbar-thumb { background:#2E2E33; border-radius:99px; }
+  ::-webkit-scrollbar-thumb:hover { background:#C8FF3D; }
+
+  .font-display { font-family:'Bebas Neue',sans-serif; letter-spacing:.02em; }
+
+  .text-glow { text-shadow: 0 0 30px rgba(200,255,61,.35); }
+  .accent-glow { box-shadow: 0 0 0 1px rgba(200,255,61,.35), 0 8px 40px -8px rgba(200,255,61,.35); }
+  .card-glow:hover { box-shadow: 0 0 0 1px rgba(200,255,61,.4), 0 20px 60px -20px rgba(200,255,61,.25); }
+
+  .hero-bg {
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 20%, rgba(200,255,61,.08), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 20% 90%, rgba(200,255,61,.05), transparent 60%),
+      linear-gradient(180deg, #0B0B0C 0%, #111113 55%, #0B0B0C 100%);
+  }
+  .grid-lines {
+    background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .reveal { opacity:0; transform: translateY(28px); transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+  .reveal.in { opacity:1; transform: none; }
+
+  .img-zoom img { transition: transform .8s cubic-bezier(.22,1,.36,1); }
+  .img-zoom:hover img { transform: scale(1.07); }
+
+  .btn-primary { background:var(--lime); color:#0B0B0C; font-weight:800; letter-spacing:.08em;
+    transition: all .25s ease; box-shadow: 0 0 0 0 rgba(200,255,61,0); }
+  .btn-primary:hover { box-shadow: 0 0 34px -4px rgba(200,255,61,.55); transform: translateY(-2px); }
+  .btn-ghost { border:1px solid rgba(255,255,255,.18); transition: all .25s ease; }
+  .btn-ghost:hover { border-color:var(--lime); color:var(--lime); }
+
+  .marquee { animation: marquee 22s linear infinite; }
+  @keyframes marquee { from { transform:translateX(0);} to { transform:translateX(-50%);} }
+
+  @keyframes fadeUp { from { opacity:0; transform:translateY(16px);} to { opacity:1; transform:none;} }
+  .page-enter { animation: fadeUp .45s cubic-bezier(.22,1,.36,1) both; }
+
+  .drawer { transition: transform .45s cubic-bezier(.22,1,.36,1); }
+  .overlay-fade { transition: opacity .35s ease; }
+
+  .badge { font-size:10px; letter-spacing:.12em; font-weight:800; }
+
+  input[type=number]::-webkit-inner-spin-button { opacity:1; }
+  .no-scrollbar::-webkit-scrollbar { display:none; }
+  .no-scrollbar { scrollbar-width:none; }
+
+  @keyframes toastIn { from { opacity:0; transform:translateY(12px) scale(.96);} to { opacity:1; transform:none;} }
+  .toast { animation: toastIn .3s ease both; }
+
+  .heart.active svg { fill:#C8FF3D; stroke:#C8FF3D; }
+</style>
+<base target="_blank">
+</head>
+<body class="antialiased overflow-x-hidden">
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="bg-lime text-vault-950 text-center text-[11px] sm:text-xs font-extrabold tracking-[.18em] py-2 px-4">
+  FREE SHIPPING ON ORDERS OVER NPR 3,000
+</div>
+
+<!-- HEADER -->
+<header id="siteHeader" class="sticky top-0 z-40 bg-vault-950/85 backdrop-blur-xl border-b border-white/5 transition-all">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 lg:h-[72px]">
+    <!-- Mobile hamburger -->
+    <button id="hamburgerBtn" class="lg:hidden p-2 -ml-2 text-white/80 hover:text-lime" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+    </button>
+
+    <!-- Logo -->
+    <a href="#" onclick="goHome();return false;" class="flex items-center gap-2.5 group">
+      <span class="w-9 h-9 rounded-xl bg-vault-800 border border-white/10 flex items-center justify-center group-hover:border-lime/60 transition-colors">
+        <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M8 13v6M12 10v12M20 10v12M24 13v6M12 16h8" stroke="#C8FF3D" stroke-width="2.6" stroke-linecap="round"/></svg>
+      </span>
+      <span class="font-display text-2xl tracking-wider pt-0.5">IRON<span class="text-lime">VAULT</span></span>
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden lg:flex items-center gap-8 text-[13px] font-bold tracking-widest text-white/70">
+      <a href="#" onclick="goHome();return false;" class="hover:text-lime transition-colors">HOME</a>
+      <a href="#" onclick="showShop();return false;" class="hover:text-lime transition-colors">SHOP</a>
+      <a href="#" onclick="scrollToId('categories');return false;" class="hover:text-lime transition-colors">CATEGORIES</a>
+      <a href="#" onclick="scrollToId('newArrivals');return false;" class="hover:text-lime transition-colors">NEW ARRIVALS</a>
+      <a href="#" onclick="scrollToId('bestSellers');return false;" class="hover:text-lime transition-colors">BEST SELLERS</a>
+      <a href="#" onclick="scrollToId('flashDeals');return false;" class="text-lime hover:text-white transition-colors">OFFERS</a>
+    </nav>
+
+    <!-- Right icons -->
+    <div class="flex items-center gap-1 sm:gap-2">
+      <button onclick="openSearch()" class="p-2.5 text-white/80 hover:text-lime transition-colors" aria-label="Search">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="hidden sm:block p-2.5 text-white/80 hover:text-lime transition-colors" aria-label="Account">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-3.5 4.5-5 8-5s6.5 1.5 8 5"/></svg>
+      </button>
+      <button onclick="openWishlistInfo()" class="hidden sm:block p-2.5 text-white/80 hover:text-lime transition-colors relative" aria-label="Wishlist">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7.5-4.7-9.5-9C1 8.5 3 5 6.5 5c2 0 3.5 1 4.5 2.5C12 6 13.5 5 15.5 5 19 5 21 8.5 20.5 12c-1 4.3-8.5 9-8.5 9z"/></svg>
+        <span id="wishCount" class="absolute -top-0.5 -right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-lime text-vault-950 text-[10px] font-extrabold hidden items-center justify-center">0</span>
+      </button>
+      <button onclick="openCart()" class="p-2.5 text-white/80 hover:text-lime transition-colors relative" aria-label="Cart">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.6"/><circle cx="17" cy="20" r="1.6"/></svg>
+        <span id="cartCount" class="absolute -top-0.5 -right-0.5 min-w-[16px] h-4 px-1 rounded-full bg-lime text-vault-950 text-[10px] font-extrabold hidden items-center justify-center">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-black/70 overlay-fade" onclick="closeMobileMenu()"></div>
+  <div class="absolute left-0 top-0 h-full w-[85%] max-w-sm bg-vault-900 border-r border-white/10 p-6 drawer" style="transform:translateX(-100%)" id="mobileMenuPanel">
+    <div class="flex items-center justify-between mb-8">
+      <span class="font-display text-2xl">IRON<span class="text-lime">VAULT</span></span>
+      <button onclick="closeMobileMenu()" class="p-2 text-white/70 hover:text-lime"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <nav class="flex flex-col gap-1 text-lg font-bold tracking-widest">
+      <a href="#" onclick="closeMobileMenu();goHome();return false;" class="py-3 border-b border-white/5 hover:text-lime">HOME</a>
+      <a href="#" onclick="closeMobileMenu();showShop();return false;" class="py-3 border-b border-white/5 hover:text-lime">SHOP</a>
+      <a href="#" onclick="closeMobileMenu();goHome();setTimeout(()=>scrollToId('categories'),80);return false;" class="py-3 border-b border-white/5 hover:text-lime">CATEGORIES</a>
+      <a href="#" onclick="closeMobileMenu();goHome();setTimeout(()=>scrollToId('newArrivals'),80);return false;" class="py-3 border-b border-white/5 hover:text-lime">NEW ARRIVALS</a>
+      <a href="#" onclick="closeMobileMenu();goHome();setTimeout(()=>scrollToId('bestSellers'),80);return false;" class="py-3 border-b border-white/5 hover:text-lime">BEST SELLERS</a>
+      <a href="#" onclick="closeMobileMenu();goHome();setTimeout(()=>scrollToId('flashDeals'),80);return false;" class="py-3 text-lime">OFFERS</a>
+    </nav>
+    <p class="mt-10 text-white/40 text-xs tracking-[.2em]">BUILT FOR THE GRIND.</p>
+  </div>
+</div>
+
+<!-- ============================ HOME PAGE ============================ -->
+<main id="page-home">
+
+  <!-- HERO -->
+  <section class="relative hero-bg grid-lines overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-14 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-2 gap-12 items-center">
+      <div class="relative z-10 page-enter">
+        <div class="inline-flex items-center gap-2 border border-lime/30 bg-lime/5 rounded-full px-4 py-1.5 mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-lime animate-pulse"></span>
+          <span class="text-[11px] font-bold tracking-[.2em] text-lime">NEW DROPS EVERY MONTH</span>
+        </div>
+        <h1 class="font-display text-[64px] sm:text-[88px] lg:text-[104px] leading-[.9] text-glow">
+          TRAIN HARD.<br><span class="text-lime">EQUIP HARDER.</span>
+        </h1>
+        <p class="mt-6 text-white/60 text-base sm:text-lg max-w-md">Premium gym accessories engineered for your everyday grind.</p>
+        <div class="mt-9 flex flex-wrap gap-4">
+          <button onclick="showShop()" class="btn-primary rounded-xl px-8 py-4 text-sm">SHOP ACCESSORIES</button>
+          <button onclick="scrollToId('newArrivals')" class="btn-ghost rounded-xl px-8 py-4 text-sm font-bold tracking-widest text-white/90">EXPLORE NEW ARRIVALS</button>
+        </div>
+        <div class="mt-12 flex gap-10">
+          <div><p class="font-display text-3xl text-lime">10K+</p><p class="text-[11px] tracking-[.18em] text-white/40 font-bold mt-1">GRINDERS</p></div>
+          <div><p class="font-display text-3xl text-lime">4.8★</p><p class="text-[11px] tracking-[.18em] text-white/40 font-bold mt-1">AVG RATING</p></div>
+          <div><p class="font-display text-3xl text-lime">77</p><p class="text-[11px] tracking-[.18em] text-white/40 font-bold mt-1">DISTRICTS SHIPPED</p></div>
+        </div>
+      </div>
+      <div class="relative reveal">
+        <div class="absolute -inset-6 bg-lime/10 blur-3xl rounded-full"></div>
+        <div class="relative rounded-2xl overflow-hidden border border-white/10 img-zoom shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80&auto=format&fit=crop" alt="IRONVAULT gym training" class="w-full h-[420px] lg:h-[540px] object-cover"
+               onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80&auto=format&fit=crop'">
+          <div class="absolute inset-0 bg-gradient-to-t from-vault-950/80 via-transparent to-transparent"></div>
+          <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between">
+            <div>
+              <p class="badge text-lime mb-1">TRENDING NOW</p>
+              <p class="font-display text-2xl">PRO LIFTING STRAPS</p>
+            </div>
+            <button onclick="openProduct(1)" class="btn-primary rounded-lg px-4 py-2.5 text-xs">NPR 899</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- marquee strip -->
+    <div class="border-t border-white/5 py-3 overflow-hidden bg-vault-900/60">
+      <div class="marquee flex whitespace-nowrap gap-10 text-[11px] font-extrabold tracking-[.25em] text-white/30 w-max">
+        <span class="flex gap-10" id="marqueeContent"></span><span class="flex gap-10" id="marqueeContent2"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section id="categories" class="max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
+    <div class="flex items-end justify-between mb-10 reveal">
+      <div>
+        <p class="badge text-lime mb-2">SHOP BY CATEGORY</p>
+        <h2 class="font-display text-5xl sm:text-7xl">GEAR <span class="text-lime">UP.</span></h2>
+      </div>
+      <button onclick="showShop()" class="hidden sm:block btn-ghost rounded-xl px-6 py-3 text-xs font-bold tracking-widest">VIEW ALL</button>
+    </div>
+    <div id="categoryGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5"></div>
+  </section>
+
+  <!-- BEST SELLERS -->
+  <section id="bestSellers" class="bg-vault-900 border-y border-white/5 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between mb-10 reveal">
+        <div>
+          <p class="badge text-lime mb-2">COMMUNITY FAVOURITES</p>
+          <h2 class="font-display text-5xl sm:text-7xl">BUILT FOR YOUR <span class="text-lime">BEST SET.</span></h2>
+        </div>
+        <button onclick="showShop()" class="hidden sm:block btn-ghost rounded-xl px-6 py-3 text-xs font-bold tracking-widest">SHOP ALL</button>
+      </div>
+      <div id="bestSellerGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"></div>
+    </div>
+  </section>
+
+  <!-- FLASH DEALS -->
+  <section id="flashDeals" class="relative py-20 lg:py-28 overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(200,255,61,.07),transparent)]"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 relative">
+      <div class="text-center mb-12 reveal">
+        <p class="badge text-lime mb-2">DON'T SLEEP ON IT</p>
+        <h2 class="font-display text-5xl sm:text-7xl text-glow">FLASH <span class="text-lime">DEALS</span></h2>
+        <p class="text-white/50 mt-2 tracking-[.2em] text-xs font-bold">LIMITED TIME. LIMITED STOCK.</p>
+        <div class="flex justify-center gap-3 mt-8" id="countdown">
+          <div class="bg-vault-800 border border-lime/25 rounded-xl w-[76px] py-3 accent-glow"><p class="font-display text-3xl" id="cdH">09</p><p class="text-[10px] tracking-[.2em] text-white/40 font-bold">HOURS</p></div>
+          <div class="bg-vault-800 border border-lime/25 rounded-xl w-[76px] py-3 accent-glow"><p class="font-display text-3xl" id="cdM">42</p><p class="text-[10px] tracking-[.2em] text-white/40 font-bold">MINUTES</p></div>
+          <div class="bg-vault-800 border border-lime/25 rounded-xl w-[76px] py-3 accent-glow"><p class="font-display text-3xl" id="cdS">18</p><p class="text-[10px] tracking-[.2em] text-white/40 font-bold">SECONDS</p></div>
+        </div>
+      </div>
+      <div id="flashGrid" class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6"></div>
+    </div>
+  </section>
+
+  <!-- SHOP BY GOAL -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
+    <div class="mb-10 reveal">
+      <p class="badge text-lime mb-2">TRAIN WITH PURPOSE</p>
+      <h2 class="font-display text-5xl sm:text-7xl">SHOP BY <span class="text-lime">GOAL.</span></h2>
+    </div>
+    <div id="goalGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5"></div>
+  </section>
+
+  <!-- FEATURED COLLECTION -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 pb-20 lg:pb-28">
+    <div class="grid lg:grid-cols-2 rounded-2xl overflow-hidden border border-white/10 reveal">
+      <div class="relative min-h-[320px] lg:min-h-[480px] img-zoom">
+        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=1200&q=80&auto=format&fit=crop" alt="Performance Collection" class="absolute inset-0 w-full h-full object-cover"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80&auto=format&fit=crop'">
+        <div class="absolute inset-0 bg-gradient-to-r from-transparent to-vault-900/40 hidden lg:block"></div>
+      </div>
+      <div class="bg-vault-900 p-8 sm:p-14 flex flex-col justify-center">
+        <p class="badge text-lime mb-3">FEATURED COLLECTION</p>
+        <h2 class="font-display text-4xl sm:text-6xl leading-[.95]">THE PERFORMANCE<br><span class="text-lime">COLLECTION</span></h2>
+        <p class="text-white/55 mt-5 max-w-md">Everything you need to upgrade your training setup — straps, wraps, belts and recovery gear, tested by real lifters.</p>
+        <div class="mt-8"><button onclick="showShop()" class="btn-primary rounded-xl px-8 py-4 text-sm">EXPLORE COLLECTION</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IRONVAULT -->
+  <section class="bg-vault-900 border-y border-white/5 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="badge text-lime mb-2">THE STANDARD</p>
+        <h2 class="font-display text-5xl sm:text-6xl">WHY <span class="text-lime">IRONVAULT</span></h2>
+      </div>
+      <div id="whyGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"></div>
+    </div>
+  </section>
+
+  <!-- NEW ARRIVALS -->
+  <section id="newArrivals" class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex items-end justify-between mb-10 reveal">
+        <div>
+          <p class="badge text-lime mb-2">FRESH STOCK</p>
+          <h2 class="font-display text-5xl sm:text-7xl">JUST <span class="text-lime">DROPPED.</span></h2>
+        </div>
+        <div class="hidden sm:flex gap-2">
+          <button onclick="scrollCarousel('newCarousel',-1)" class="w-11 h-11 rounded-xl border border-white/15 hover:border-lime hover:text-lime flex items-center justify-center transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+          <button onclick="scrollCarousel('newCarousel',1)" class="w-11 h-11 rounded-xl border border-white/15 hover:border-lime hover:text-lime flex items-center justify-center transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto pl-4 sm:pl-6">
+      <div id="newCarousel" class="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar snap-x snap-mandatory pr-4 sm:pr-6"></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="bg-vault-900 border-y border-white/5 py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 reveal">
+        <p class="badge text-lime mb-2">REAL PEOPLE. REAL REPS.</p>
+        <h2 class="font-display text-5xl sm:text-7xl">WHAT THE <span class="text-lime">GRINDERS SAY</span></h2>
+      </div>
+      <div id="reviewGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"></div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY -->
+  <section class="max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
+    <div class="text-center mb-10 reveal">
+      <p class="badge text-lime mb-2">THE MOVEMENT</p>
+      <h2 class="font-display text-5xl sm:text-7xl">JOIN THE <span class="text-lime">GRIND</span></h2>
+      <p class="text-white/50 mt-3 text-sm">Tag <span class="text-lime font-semibold">@ironvault</span> to get featured.</p>
+    </div>
+    <div id="instaGrid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 reveal"></div>
+    <div class="text-center mt-10 reveal">
+      <button class="btn-primary rounded-xl px-8 py-4 text-sm inline-flex items-center gap-2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+        FOLLOW @IRONVAULT
+      </button>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="relative py-20 lg:py-28 overflow-hidden border-t border-white/5">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_55%_60%_at_50%_100%,rgba(200,255,61,.09),transparent)]"></div>
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center relative reveal">
+      <h2 class="font-display text-5xl sm:text-7xl text-glow">STAY IN THE <span class="text-lime">GRIND.</span></h2>
+      <p class="text-white/55 mt-4">Get new product drops, exclusive offers and training gear updates.</p>
+      <form id="newsletterForm" class="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+        <input id="newsletterEmail" type="email" required placeholder="Enter your email"
+               class="flex-1 bg-vault-800 border border-white/10 rounded-xl px-5 py-4 text-sm outline-none focus:border-lime/60 transition-colors placeholder:text-white/30">
+        <button type="submit" class="btn-primary rounded-xl px-8 py-4 text-sm">JOIN NOW</button>
+      </form>
+      <p id="newsletterMsg" class="text-lime text-xs font-bold mt-3 h-4"></p>
+    </div>
+  </section>
+</main>
+
+<!-- ============================ SHOP PAGE ============================ -->
+<main id="page-shop" class="hidden max-w-7xl mx-auto px-4 sm:px-6 py-10 lg:py-14">
+  <div class="flex items-center gap-2 text-xs text-white/40 font-semibold mb-6">
+    <a href="#" onclick="goHome();return false;" class="hover:text-lime">HOME</a><span>/</span><span class="text-white/80">SHOP</span>
+  </div>
+  <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+    <div>
+      <p class="badge text-lime mb-2">ALL GEAR</p>
+      <h1 class="font-display text-5xl sm:text-7xl">THE <span class="text-lime">VAULT</span></h1>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="mobileFilterBtn" onclick="toggleFilterDrawer()" class="lg:hidden btn-ghost rounded-xl px-5 py-3 text-xs font-bold tracking-widest flex items-center gap-2">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M7 12h10M10 18h4"/></svg>FILTERS
+      </button>
+      <select id="shopSort" onchange="renderShop()" class="bg-vault-800 border border-white/10 rounded-xl px-4 py-3 text-xs font-bold tracking-wider outline-none focus:border-lime/60 cursor-pointer">
+        <option value="popularity">SORT: POPULARITY</option>
+        <option value="price-asc">PRICE: LOW TO HIGH</option>
+        <option value="price-desc">PRICE: HIGH TO LOW</option>
+        <option value="rating">HIGHEST RATED</option>
+        <option value="newest">NEWEST</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="flex gap-8">
+    <!-- Sidebar -->
+    <aside id="shopSidebar" class="hidden lg:block w-64 shrink-0">
+      <div class="sticky top-28 space-y-8" id="filterPanel"></div>
+    </aside>
+    <!-- Grid -->
+    <div class="flex-1">
+      <p class="text-white/40 text-xs font-bold tracking-widest mb-5" id="shopCount"></p>
+      <div id="shopGrid" class="grid grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6"></div>
+      <div id="shopEmpty" class="hidden text-center py-24">
+        <p class="font-display text-4xl text-white/30">NOTHING IN THE VAULT</p>
+        <p class="text-white/40 text-sm mt-2">Try adjusting your filters.</p>
+        <button onclick="resetFilters()" class="btn-ghost rounded-xl px-6 py-3 text-xs font-bold tracking-widest mt-6">RESET FILTERS</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Mobile filter drawer -->
+<div id="filterDrawer" class="fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-black/70 overlay-fade" onclick="toggleFilterDrawer()"></div>
+  <div class="absolute right-0 top-0 h-full w-[88%] max-w-sm bg-vault-900 border-l border-white/10 p-6 overflow-y-auto drawer" style="transform:translateX(100%)" id="filterDrawerPanel">
+    <div class="flex items-center justify-between mb-6">
+      <span class="font-display text-2xl">FILTERS</span>
+      <button onclick="toggleFilterDrawer()" class="p-2 text-white/70 hover:text-lime"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div id="filterPanelMobile"></div>
+    <button onclick="toggleFilterDrawer()" class="btn-primary rounded-xl w-full py-4 text-sm mt-6">SHOW RESULTS</button>
+  </div>
+</div>
+
+<!-- ============================ PRODUCT PAGE ============================ -->
+<main id="page-product" class="hidden max-w-7xl mx-auto px-4 sm:px-6 py-10 lg:py-14">
+  <div id="productDetail"></div>
+  <div class="mt-20">
+    <h2 class="font-display text-4xl sm:text-5xl mb-8">YOU MAY ALSO <span class="text-lime">LIKE</span></h2>
+    <div id="relatedGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"></div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-vault-900 border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10">
+    <div class="col-span-2">
+      <div class="flex items-center gap-2.5 mb-4">
+        <span class="w-9 h-9 rounded-xl bg-vault-800 border border-white/10 flex items-center justify-center">
+          <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><path d="M8 13v6M12 10v12M20 10v12M24 13v6M12 16h8" stroke="#C8FF3D" stroke-width="2.6" stroke-linecap="round"/></svg>
+        </span>
+        <span class="font-display text-2xl">IRON<span class="text-lime">VAULT</span></span>
+      </div>
+      <p class="text-white/45 text-sm max-w-xs">Premium gym accessories engineered for your everyday grind. Built for the grind — delivered across Nepal.</p>
+      <div class="flex gap-3 mt-6">
+        <a href="#" class="w-10 h-10 rounded-lg bg-vault-800 border border-white/10 flex items-center justify-center text-white/60 hover:text-lime hover:border-lime/50 transition-colors" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" class="w-10 h-10 rounded-lg bg-vault-800 border border-white/10 flex items-center justify-center text-white/60 hover:text-lime hover:border-lime/50 transition-colors" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h-2.5A4.5 4.5 0 0 0 8 7.5V10H5v4h3v7h4v-7h3l1-4h-4V7.5A1.5 1.5 0 0 1 13.5 6H15z"/></svg></a>
+        <a href="#" class="w-10 h-10 rounded-lg bg-vault-800 border border-white/10 flex items-center justify-center text-white/60 hover:text-lime hover:border-lime/50 transition-colors" aria-label="YouTube"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="m10 9.5 5 2.5-5 2.5z" fill="currentColor"/></svg></a>
+        <a href="#" class="w-10 h-10 rounded-lg bg-vault-800 border border-white/10 flex items-center justify-center text-white/60 hover:text-lime hover:border-lime/50 transition-colors" aria-label="TikTok"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 12a4 4 0 1 0 4 4V4c.5 2.5 2.5 4.5 5 5"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <p class="text-xs font-extrabold tracking-[.2em] text-white/80 mb-4">SHOP</p>
+      <ul class="space-y-2.5 text-sm text-white/45">
+        <li><a href="#" onclick="showShop();return false;" class="hover:text-lime transition-colors">All Products</a></li>
+        <li><a href="#" onclick="goHome();setTimeout(()=>scrollToId('bestSellers'),80);return false;" class="hover:text-lime transition-colors">Best Sellers</a></li>
+        <li><a href="#" onclick="goHome();setTimeout(()=>scrollToId('newArrivals'),80);return false;" class="hover:text-lime transition-colors">New Arrivals</a></li>
+        <li><a href="#" onclick="goHome();setTimeout(()=>scrollToId('flashDeals'),80);return false;" class="hover:text-lime transition-colors">Offers</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-extrabold tracking-[.2em] text-white/80 mb-4">CATEGORIES</p>
+      <ul class="space-y-2.5 text-sm text-white/45" id="footerCategories"></ul>
+    </div>
+    <div>
+      <p class="text-xs font-extrabold tracking-[.2em] text-white/80 mb-4">HELP</p>
+      <ul class="space-y-2.5 text-sm text-white/45">
+        <li><a href="#" class="hover:text-lime transition-colors">Contact Us</a></li>
+        <li><a href="#" class="hover:text-lime transition-colors">Shipping</a></li>
+        <li><a href="#" class="hover:text-lime transition-colors">Returns</a></li>
+        <li><a href="#" class="hover:text-lime transition-colors">FAQs</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-extrabold tracking-[.2em] text-white/80 mb-4">COMPANY</p>
+      <ul class="space-y-2.5 text-sm text-white/45">
+        <li><a href="#" class="hover:text-lime transition-colors">About Us</a></li>
+        <li><a href="#" class="hover:text-lime transition-colors">Our Story</a></li>
+        <li><a href="#" class="hover:text-lime transition-colors">Privacy Policy</a></li>
+        <li><a href="#" class="hover:text-lime transition-colors">Terms & Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/5 py-5 text-center text-[11px] tracking-[.2em] text-white/30 font-bold">
+    © 2026 IRONVAULT. ALL RIGHTS RESERVED.
+  </div>
+</footer>
+
+<!-- ============================ CART DRAWER ============================ -->
+<div id="cartOverlay" class="fixed inset-0 z-50 hidden">
+  <div class="absolute inset-0 bg-black/70 overlay-fade opacity-0" id="cartOverlayBg" onclick="closeCart()"></div>
+  <aside id="cartDrawer" class="absolute right-0 top-0 h-full w-full max-w-md bg-vault-900 border-l border-white/10 flex flex-col drawer" style="transform:translateX(100%)">
+    <div class="flex items-center justify-between p-6 border-b border-white/5">
+      <h2 class="font-display text-3xl">YOUR <span class="text-lime">CART</span> <span id="cartDrawerCount" class="text-white/40 text-xl"></span></h2>
+      <button onclick="closeCart()" class="p-2 text-white/70 hover:text-lime"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div id="cartItems" class="flex-1 overflow-y-auto p-6 space-y-5"></div>
+    <div class="p-6 border-t border-white/5 space-y-4">
+      <div class="flex justify-between text-sm"><span class="text-white/50">Subtotal</span><span id="cartSubtotal" class="font-bold">NPR 0</span></div>
+      <div class="flex justify-between text-sm" id="cartShippingRow"><span class="text-white/50">Shipping</span><span id="cartShipping" class="font-bold text-lime">FREE</span></div>
+      <div class="flex justify-between font-display text-2xl pt-2 border-t border-white/5"><span>TOTAL</span><span id="cartTotal" class="text-lime">NPR 0</span></div>
+      <div class="grid grid-cols-2 gap-3 pt-1">
+        <button onclick="closeCart();showShop();" class="btn-ghost rounded-xl py-4 text-xs font-bold tracking-widest">VIEW CART</button>
+        <button onclick="showToast('Checkout — connect Stripe / Khalti / eSewa here')" class="btn-primary rounded-xl py-4 text-xs">CHECKOUT</button>
+      </div>
+      <p class="text-center text-[11px] text-white/30">Free shipping on orders over NPR 3,000</p>
+    </div>
+  </aside>
+</div>
+
+<!-- ============================ SEARCH OVERLAY ============================ -->
+<div id="searchOverlay" class="fixed inset-0 z-50 hidden bg-vault-950/97 backdrop-blur-xl overflow-y-auto">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="flex-1 relative">
+        <svg class="absolute left-5 top-1/2 -translate-y-1/2 text-white/40" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="searchInput" oninput="renderSearch()" placeholder="Search straps, wraps, shakers..."
+               class="w-full bg-vault-800 border border-white/10 rounded-2xl pl-14 pr-5 py-5 text-lg outline-none focus:border-lime/60 transition-colors placeholder:text-white/30">
+      </div>
+      <button onclick="closeSearch()" class="p-3 text-white/70 hover:text-lime shrink-0"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="flex flex-wrap items-center gap-3 mb-8">
+      <div id="searchCatChips" class="flex flex-wrap gap-2"></div>
+      <select id="searchSort" onchange="renderSearch()" class="bg-vault-800 border border-white/10 rounded-xl px-4 py-2.5 text-xs font-bold tracking-wider outline-none focus:border-lime/60 cursor-pointer ml-auto">
+        <option value="popularity">POPULARITY</option>
+        <option value="price-asc">PRICE ↑</option>
+        <option value="price-desc">PRICE ↓</option>
+        <option value="rating">RATING</option>
+      </select>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4" id="searchResults"></div>
+    <p id="searchEmpty" class="hidden text-center py-20 font-display text-3xl text-white/30">NO MATCHES IN THE VAULT</p>
+  </div>
+</div>
+
+<!-- TOASTS -->
+<div id="toastWrap" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-[60] space-y-2 w-[92%] max-w-sm"></div>
+
+<script>
+/* ============================================================
+   IRONVAULT — storefront application
+   Architecture note: state + render functions are isolated in a
+   single `Store` object so this layer can later be swapped for
+   API calls (products DB, auth, Stripe/Khalti/eSewa, orders).
+============================================================ */
+const U = (id, w=800) => `https://images.unsplash.com/photo-${id}?w=${w}&q=80&auto=format&fit=crop`;
+const FALLBACK = U('1534438327276-14e5300c3a48', 800);
+
+const IMG = {
+  straps: U('1517963879433-6ad2b056d712'), wraps: U('1571019613454-1cb2f99b2d8b'),
+  gloves: U('1583454110551-21f2fa2afe61'), bands: U('1594381898411-846e7d193883'),
+  shaker: U('1593095948070-0c0cb2d0f6c1'), bag: U('1553062407-98eeb64c6a62'),
+  belt: U('1526506118085-60ce8714f8c5'), knee: U('1584735935682-2f2b69dff9d2'),
+  chalk: U('1546483875-ad9014c88eba'), rope: U('1434682881908-b43d0467b798'),
+  abroller: U('1574680096145-d05b474e2155'), foam: U('1544367567-0f2fcb009e0b'),
+  gym1: U('1517836357463-d25dfeac3438'), gym2: U('1571902943202-507ec2618e8f'),
+  gym3: U('1581009146145-b5ef050c2e1e'), gym4: U('1517838277536-f5f99be501cd'),
+  gym5: U('1550345332-09e3ac987658'), gym6: U('1540497077202-7c8a3999166f')
+};
+
+const CATEGORIES = [
+  { id:'straps', name:'Lifting Straps', img:IMG.straps },
+  { id:'wraps',  name:'Wrist Wraps',   img:IMG.wraps },
+  { id:'gloves', name:'Gym Gloves',    img:IMG.gloves },
+  { id:'bands',  name:'Resistance Bands', img:IMG.bands },
+  { id:'shaker', name:'Shaker Bottles', img:IMG.shaker },
+  { id:'bag',    name:'Gym Bags',      img:IMG.bag },
+  { id:'belt',   name:'Weightlifting Belts', img:IMG.belt },
+  { id:'knee',   name:'Knee Sleeves',  img:IMG.knee }
+];
+
+const PRODUCTS = [
+  { id:1, name:'IRONVAULT Pro Lifting Straps', cat:'straps', price:899,  was:1199, rating:5, reviews:214, badge:'BEST SELLER', img:IMG.straps,
+    colors:['#0B0B0C','#C8FF3D','#8B5CF6'], desc:'Figure-8 cotton straps with reinforced bar stitching. Lock in and pull heavy without your grip giving out first.',
+    specs:{Material:'Heavy cotton webbing', Length:'56 cm', Grip:'Neoprene padded', Warranty:'6 months'},
+    features:['Reinforced double stitching','Non-slip bar grip','Machine washable','Sold as a pair'], stock:78 },
+  { id:2, name:'IRONVAULT Heavy Duty Wrist Wraps', cat:'wraps', price:1199, was:1499, rating:5, reviews:186, badge:'BEST SELLER', img:IMG.wraps,
+    colors:['#0B0B0C','#EF4444','#3B82F6'], desc:'Competition-grade 18" wraps with thumb loop and heavy-duty velcro. Stabilize your wrists under max loads.',
+    specs:{Length:'18 inches', Stiffness:'Medium-Hard', Closure:'Industrial velcro', Certification:'IPF style'},
+    features:['Thumb loop for fast wrapping','Reinforced edge binding','Left/right specific pair','Breathable fabric'], stock:64 },
+  { id:3, name:'IRONVAULT Performance Shaker 700ml', cat:'shaker', price:799, rating:4, reviews:342, badge:'BEST SELLER', img:IMG.shaker,
+    colors:['#0B0B0C','#C8FF3D','#F97316'], desc:'Leak-proof 700ml shaker with wire mixing ball and measurement scale. Zero lumps, zero spills.',
+    specs:{Capacity:'700 ml', Material:'BPA-free Tritan', Lid:'Screw-top + flip cap', Dishwasher:'Safe (top rack)'},
+    features:['100% leak-proof guarantee','Wire mixing ball included','ml & oz scale etched','Carry loop built in'], stock:91 },
+  { id:4, name:'IRONVAULT Resistance Band Set', cat:'bands', price:1499, was:1999, rating:5, reviews:158, badge:'BEST SELLER', img:IMG.bands,
+    colors:['#C8FF3D','#EF4444','#3B82F6'], desc:'5-stack latex bands from 10–50 lbs with handles, door anchor and carry pouch. A full gym in your bag.',
+    specs:{Bands:'5 resistance levels', Range:'10–50 lbs', Material:'Natural latex', Includes:'Handles, anchor, pouch'},
+    features:['Stackable up to 150 lbs','Snap-resistant layered latex','Full-body workout guide','Door anchor included'], stock:83 },
+  { id:5, name:'IRONVAULT Leather Weightlifting Belt', cat:'belt', price:2499, was:2999, rating:5, reviews:97, badge:null, img:IMG.belt,
+    colors:['#78350F','#0B0B0C'], desc:'10mm genuine leather belt with 4" uniform profile and double-prong buckle. Built for squats, deadlifts and presses.',
+    specs:{Thickness:'10 mm', Width:'4 in uniform', Leather:'Genuine cowhide', Buckle:'Double prong steel'},
+    features:['Braces your core on big lifts','Pre-broken-in leather','Steel double-prong buckle','Sizes S–XXL'], stock:45 },
+  { id:6, name:'IRONVAULT Knee Sleeves (Pair)', cat:'knee', price:1699, was:2199, rating:5, reviews:121, badge:'NEW', img:IMG.knee,
+    colors:['#0B0B0C','#C8FF3D'], desc:'7mm neoprene competition sleeves for warmth, compression and confidence out of the hole.',
+    specs:{Thickness:'7 mm neoprene', Length:'30 cm', Use:'Squats, Olympic lifts', Sizes:'S–XXL'},
+    features:['Keeps joints warm between sets','Competition legal length','Anti-slip inner weave','Anatomical cut'], stock:52 },
+  { id:7, name:'IRONVAULT Grip Pro Gym Gloves', cat:'gloves', price:999, was:1299, rating:4, reviews:167, badge:null, img:IMG.gloves,
+    colors:['#0B0B0C','#EF4444'], desc:'Padded palm gloves with wrist strap and vented back. Protect your hands, keep your calluses.',
+    specs:{Palm:'Silicone grip print', Padding:'Gel + foam', Closure:'Hook & loop wrist', Sizes:'M–XL'},
+    features:['No-slip silicone palm','Vented stretch back','Easy-pull removal tabs','Wipe clean'], stock:69 },
+  { id:8, name:'IRONVAULT Duffel Gym Bag 45L', cat:'bag', price:2199, rating:5, reviews:88, badge:null, img:IMG.bag,
+    colors:['#0B0B0C','#374151'], desc:'45L water-resistant duffel with vented shoe tunnel, wet pocket and padded strap. Carry the whole setup.',
+    specs:{Capacity:'45 L', Material:'Ripstop polyester', Pockets:'6 + shoe tunnel', Strap:'Padded, removable'},
+    features:['Separate vented shoe tunnel','Wet/dry compartment','Water-resistant shell','Fits belt + sleeves + bottle'], stock:57 },
+  { id:9, name:'IRONVAULT Liquid Chalk 250ml', cat:'chalk', price:549, rating:4, reviews:203, badge:null, img:IMG.chalk,
+    colors:['#F4F4F2'], desc:'Fast-drying liquid chalk with magnesium carbonate. Maximum grip, minimal dust, gym-friendly.',
+    specs:{Volume:'250 ml', Base:'Magnesium carbonate', 'Dry time':'~15 seconds', Residue:'Low dust'},
+    features:['Gym-friendly low dust','Lasts full sessions','No-mess applicator','Re-sealable bottle'], stock:95 },
+  { id:10, name:'IRONVAULT Speed Jump Rope', cat:'rope', price:899, was:1099, rating:5, reviews:134, badge:'NEW', img:IMG.rope,
+    colors:['#0B0B0C','#C8FF3D'], desc:'Ball-bearing speed rope with adjustable coated cable. Double-unders, unlocked.',
+    specs:{Cable:'2.5mm coated steel', Bearings:'Dual ball-bearing', Length:'Adjustable to 3m', Handles:'Aluminum'},
+    features:['Smooth spin for double-unders','Tool-free length adjust','Tangle-free coated cable','Carry pouch included'], stock:71 },
+  { id:11, name:'IRONVAULT Core Ab Roller', cat:'abroller', price:1299, rating:4, reviews:76, badge:null, img:IMG.abroller,
+    colors:['#0B0B0C','#C8FF3D'], desc:'Wide-wheel ab roller with knee pad and anti-slip tread. Build a bulletproof core.',
+    specs:{Wheel:'10 cm wide', Grip:'Foam handles', Includes:'Knee pad', 'Max load':'150 kg'},
+    features:['Stable wide wheel design','Anti-slip rubber tread','Thick comfort knee pad','Quiet rolling'], stock:48 },
+  { id:12, name:'IRONVAULT Recovery Foam Roller', cat:'foam', price:1099, was:1399, rating:4, reviews:92, badge:'NEW', img:IMG.foam,
+    colors:['#1E293B','#C8FF3D'], desc:'High-density EPP roller with trigger-point zones. Roll out, recover faster, come back harder.',
+    specs:{Length:'45 cm', Density:'High (EPP)', Surface:'Trigger zones', Weight:'Lightweight'},
+    features:['Trigger-point zone mapping','Won\u2019t lose shape','Light & travel friendly','Full-body recovery'], stock:66 }
+];
+
+/* ---------------- STATE ---------------- */
+const Store = {
+  cart: [],           // {id, qty}
+  wishlist: new Set(),
+  filters: { cats:new Set(), maxPrice:3000, minRating:0, inStock:false },
+  searchCat: 'all',
+  page: 'home',
+  dealEnd: Date.now() + (9*3600 + 42*60 + 18) * 1000
+};
+const fmt = n => 'NPR ' + n.toLocaleString('en-US');
+const P = id => PRODUCTS.find(p => p.id === id);
+const discount = p => p.was ? Math.round((1 - p.price/p.was)*100) : 0;
+const newArrivals = PRODUCTS.filter(p => p.badge === 'NEW');
+const flashDeals = [PRODUCTS[3], PRODUCTS[1], PRODUCTS[4]];
+
+/* ---------------- HELPERS ---------------- */
+function stars(r){
+  return Array.from({length:5},(_,i)=>`<span class="${i<r?'text-lime':'text-white/20'}">★</span>`).join('');
+}
+function imgTag(src, alt, cls){
+  return `<img src="${src}" alt="${alt}" loading="lazy" class="${cls}" onerror="this.onerror=null;this.src='${FALLBACK}'">`;
+}
+function scrollToId(id){
+  if (Store.page !== 'home') { goHome(); setTimeout(()=>document.getElementById(id)?.scrollIntoView({behavior:'smooth'}), 120); return; }
+  document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
+}
+function scrollCarousel(id, dir){
+  document.getElementById(id).scrollBy({left: dir * 320, behavior:'smooth'});
+}
+function showToast(msg){
+  const t = document.createElement('div');
+  t.className = 'toast bg-vault-800 border border-lime/40 rounded-xl px-5 py-4 text-sm font-semibold text-center shadow-2xl accent-glow';
+  t.textContent = msg;
+  document.getElementById('toastWrap').appendChild(t);
+  setTimeout(()=>{ t.style.opacity='0'; t.style.transition='opacity .4s'; setTimeout(()=>t.remove(),400); }, 2400);
+}
+
+/* ---------------- PRODUCT CARD ---------------- */
+function productCard(p, opts={}){
+  const d = discount(p);
+  const inCart = Store.cart.find(c=>c.id===p.id);
+  return `
+  <div class="group bg-vault-800/60 border border-white/5 rounded-2xl overflow-hidden card-glow transition-all hover:-translate-y-1 flex flex-col ${opts.snap?'snap-start shrink-0 w-[240px] sm:w-[280px]':''}">
+    <div class="relative img-zoom cursor-pointer overflow-hidden" onclick="openProduct(${p.id})">
+      ${imgTag(p.img, p.name, 'w-full aspect-[4/5] object-cover')}
+      <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-60"></div>
+      ${p.badge ? `<span class="absolute top-3 left-3 badge ${p.badge==='NEW'?'bg-lime text-vault-950':'bg-vault-950/90 border border-lime/40 text-lime'} rounded-md px-2.5 py-1">${p.badge}</span>`:''}
+      ${d?`<span class="absolute top-3 right-3 badge bg-red-500 text-white rounded-md px-2 py-1">-${d}%</span>`:''}
+      <button onclick="event.stopPropagation();toggleWish(${p.id},this)" class="heart ${Store.wishlist.has(p.id)?'active':''} absolute bottom-3 right-3 w-9 h-9 rounded-lg bg-vault-950/80 backdrop-blur border border-white/10 flex items-center justify-center text-white/70 hover:border-lime/60 transition-colors" aria-label="Wishlist">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-7.5-4.7-9.5-9C1 8.5 3 5 6.5 5c2 0 3.5 1 4.5 2.5C12 6 13.5 5 15.5 5 19 5 21 8.5 20.5 12c-1 4.3-8.5 9-8.5 9z"/></svg>
+      </button>
+    </div>
+    <div class="p-4 flex flex-col flex-1">
+      <p class="text-[10px] tracking-[.18em] font-bold text-white/35 uppercase">${catName(p.cat)}</p>
+      <h3 class="font-bold text-sm mt-1 leading-snug cursor-pointer hover:text-lime transition-colors" onclick="openProduct(${p.id})">${p.name}</h3>
+      <div class="flex items-center gap-1.5 mt-1.5 text-xs">${stars(p.rating)}<span class="text-white/35 ml-1">(${p.reviews})</span></div>
+      <div class="flex items-baseline gap-2 mt-2.5">
+        <span class="font-extrabold">${fmt(p.price)}</span>
+        ${p.was?`<span class="text-white/30 line-through text-xs">${fmt(p.was)}</span>`:''}
+      </div>
+      <button onclick="addToCart(${p.id})" class="mt-3.5 ${inCart?'bg-vault-700 text-lime border border-lime/40':'btn-primary'} rounded-xl py-3 text-[11px] font-extrabold tracking-[.15em] transition-all">
+        ${inCart ? 'IN CART ✓' : 'ADD TO CART'}
+      </button>
+    </div>
+  </div>`;
+}
+function catName(id){ return CATEGORIES.find(c=>c.id===id)?.name || id; }
+</script>
+
+<script>
+/* ---------------- SECTION RENDERERS ---------------- */
+function renderCategories(){
+  document.getElementById('categoryGrid').innerHTML = CATEGORIES.map((c,i)=>`
+    <div class="group relative rounded-2xl overflow-hidden img-zoom cursor-pointer border border-white/5 ${i===0||i===3?'lg:row-span-2 h-full min-h-[280px]':''}" style="aspect-ratio:${i===0||i===3?'auto':'4/5'}"
+         onclick="showShop('${c.id}')">
+      ${imgTag(c.img, c.name, 'absolute inset-0 w-full h-full object-cover')}
+      <div class="absolute inset-0 bg-gradient-to-t from-vault-950/95 via-vault-950/25 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 p-5">
+        <h3 class="font-display text-2xl sm:text-3xl leading-none">${c.name.toUpperCase()}</h3>
+        <span class="inline-flex items-center gap-1.5 mt-2.5 text-[11px] font-extrabold tracking-[.18em] text-lime opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+          SHOP NOW <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </span>
+      </div>
+    </div>`).join('');
+  document.getElementById('footerCategories').innerHTML = [
+    ['straps','Lifting Gear'],['wraps','Wrist Support'],['bands','Resistance Training'],
+    ['knee','Gym Accessories'],['bag','Bags & Bottles']
+  ].map(([id,n])=>`<li><a href="#" onclick="showShop('${id}');return false;" class="hover:text-lime transition-colors">${n}</a></li>`).join('');
+}
+
+function renderBestSellers(){
+  document.getElementById('bestSellerGrid').innerHTML = PRODUCTS.slice(0,4).map(p=>productCard(p)).join('');
+}
+
+function renderFlash(){
+  document.getElementById('flashGrid').innerHTML = flashDeals.map(p=>{
+    const d = discount(p);
+    const sold = Math.round((100 - p.stock) * 0.9) + 5; // visual sold %
+    return `
+    <div class="bg-vault-800/60 border border-lime/20 rounded-2xl overflow-hidden card-glow flex flex-col">
+      <div class="relative img-zoom cursor-pointer" onclick="openProduct(${p.id})">
+        ${imgTag(p.img, p.name, 'w-full aspect-[16/10] object-cover')}
+        <span class="absolute top-3 left-3 badge bg-red-500 rounded-md px-2.5 py-1 text-white">FLASH -${d}%</span>
+      </div>
+      <div class="p-5 flex flex-col flex-1">
+        <h3 class="font-bold text-sm cursor-pointer hover:text-lime" onclick="openProduct(${p.id})">${p.name}</h3>
+        <div class="flex items-baseline gap-2 mt-2">
+          <span class="font-display text-3xl text-lime">${fmt(p.price)}</span>
+          <span class="text-white/30 line-through text-sm">${fmt(p.was)}</span>
+        </div>
+        <div class="mt-4">
+          <div class="flex justify-between text-[10px] font-bold tracking-widest text-white/40 mb-1.5">
+            <span>${sold}% CLAIMED</span><span class="text-red-400">${p.stock} LEFT</span>
+          </div>
+          <div class="h-1.5 bg-vault-700 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-red-500 to-lime rounded-full" style="width:${sold}%"></div>
+          </div>
+        </div>
+        <button onclick="addToCart(${p.id})" class="btn-primary rounded-xl py-3.5 text-[11px] mt-5 tracking-[.15em]">ADD TO CART</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderGoals(){
+  const goals = [
+    {t:'STRENGTH', d:'Gear designed for heavy training.', img:IMG.belt, cat:'belt'},
+    {t:'PERFORMANCE', d:'Equipment built for better sessions.', img:IMG.gym3, cat:'straps'},
+    {t:'MOBILITY', d:'Move better. Recover smarter.', img:IMG.foam, cat:'knee'},
+    {t:'EVERYDAY FITNESS', d:'Simple gear for every workout.', img:IMG.gym5, cat:'shaker'}
+  ];
+  document.getElementById('goalGrid').innerHTML = goals.map(g=>`
+    <div class="group relative rounded-2xl overflow-hidden img-zoom cursor-pointer border border-white/5 min-h-[340px]" onclick="showShop('${g.cat}')">
+      ${imgTag(g.img, g.t, 'absolute inset-0 w-full h-full object-cover')}
+      <div class="absolute inset-0 bg-gradient-to-t from-vault-950/95 via-vault-950/20 to-transparent"></div>
+      <div class="absolute bottom-0 p-5">
+        <h3 class="font-display text-3xl">${g.t}</h3>
+        <p class="text-white/50 text-xs mt-1.5">${g.d}</p>
+        <span class="inline-flex items-center gap-1.5 mt-3 text-[11px] font-extrabold tracking-[.18em] text-lime opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+          SHOP NOW <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </span>
+      </div>
+    </div>`).join('');
+}
+
+function renderWhy(){
+  const items = [
+    {t:'PREMIUM BUILD', d:'Designed for repeated, demanding workouts.', icon:'M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6z M9 12l2 2 4-4'},
+    {t:'TRAINING FOCUSED', d:'Every product selected with real training in mind.', icon:'M6.5 6.5v11M17.5 6.5v11M3.5 9.5v5M20.5 9.5v5M6.5 12h11'},
+    {t:'SECURE CHECKOUT', d:'Safe and simple online shopping.', icon:'M12 2 4 5v6c0 5 3.5 8.6 8 10 4.5-1.4 8-5 8-10V5z M9 12l2 2 4-4.5'},
+    {t:'FAST DELIVERY', d:'Reliable delivery across Nepal.', icon:'M3 7h11v8H3z M14 10h4l3 3v2h-7 M7.5 18a1.8 1.8 0 1 0 0-.01M17.5 18a1.8 1.8 0 1 0 0-.01'}
+  ];
+  document.getElementById('whyGrid').innerHTML = items.map(x=>`
+    <div class="bg-vault-800/50 border border-white/5 rounded-2xl p-6 hover:border-lime/30 transition-colors text-center reveal">
+      <div class="w-14 h-14 mx-auto rounded-xl bg-lime/10 border border-lime/25 flex items-center justify-center mb-4">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="${x.icon}"/></svg>
+      </div>
+      <h3 class="font-display text-2xl">${x.t}</h3>
+      <p class="text-white/45 text-xs mt-2 leading-relaxed">${x.d}</p>
+    </div>`).join('');
+}
+
+function renderNewArrivals(){
+  document.getElementById('newCarousel').innerHTML = newArrivals.concat(PRODUCTS.slice(0,4)).map(p=>productCard(p,{snap:true})).join('');
+}
+
+function renderReviews(){
+  const R = [
+    {n:'Sandeep', r:5, p:'Pro Lifting Straps', t:'Straps changed my deadlift day completely. No more grip failing before my back does.'},
+    {n:'Anish', r:5, p:'Heavy Duty Wrist Wraps', t:'Wraps are stiff exactly where they need to be. Bench feels way more stable.'},
+    {n:'Pratiksha', r:5, p:'Resistance Band Set', t:'Bought for home workouts — the full set replaced my gym membership for months.'},
+    {n:'Bibek', r:4, p:'Performance Shaker 700ml', t:'Finally a shaker that does not leak in my bag. Delivery to Pokhara took 2 days.'}
+  ];
+  document.getElementById('reviewGrid').innerHTML = R.map(x=>`
+    <div class="bg-vault-800/50 border border-white/5 rounded-2xl p-6 flex flex-col reveal">
+      <div class="text-sm">${stars(x.r)}</div>
+      <p class="text-white/70 text-sm mt-3 leading-relaxed flex-1">"${x.t}"</p>
+      <div class="mt-5 pt-4 border-t border-white/5 flex items-center justify-between">
+        <div>
+          <p class="font-bold text-sm">${x.n}</p>
+          <p class="text-white/35 text-[11px]">on ${x.p}</p>
+        </div>
+        <span class="badge bg-lime/10 border border-lime/30 text-lime rounded-md px-2 py-1 inline-flex items-center gap-1">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="m4 12 5 5L20 6"/></svg>VERIFIED
+        </span>
+      </div>
+    </div>`).join('');
+}
+
+function renderInsta(){
+  const imgs = [IMG.gym1, IMG.gym3, IMG.gym4, IMG.gym6, IMG.gym5, IMG.gym2];
+  document.getElementById('instaGrid').innerHTML = imgs.map((s,i)=>`
+    <div class="group relative rounded-xl overflow-hidden img-zoom cursor-pointer border border-white/5 aspect-square">
+      ${imgTag(s, 'IRONVAULT community', 'absolute inset-0 w-full h-full object-cover')}
+      <div class="absolute inset-0 bg-vault-950/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#C8FF3D"/></svg>
+      </div>
+    </div>`).join('');
+  const words = ['BUILT FOR THE GRIND','FREE SHIPPING OVER NPR 3,000','PREMIUM GEAR','DELIVERED ACROSS NEPAL','TRAIN HARD. EQUIP HARDER.'];
+  const m = words.map(w=>`<span>${w}</span><span class="text-lime">◆</span>`).join('');
+  document.getElementById('marqueeContent').innerHTML = m;
+  document.getElementById('marqueeContent2').innerHTML = m;
+}
+
+/* ---------------- SHOP PAGE ---------------- */
+function filterPanelHTML(){
+  const f = Store.filters;
+  return `
+  <div>
+    <p class="text-xs font-extrabold tracking-[.2em] text-white/80 mb-4">CATEGORIES</p>
+    <div class="space-y-2.5">
+      ${CATEGORIES.map(c=>`
+        <label class="flex items-center gap-3 text-sm text-white/60 cursor-pointer hover:text-white group">
+          <input type="checkbox" ${f.cats.has(c.id)?'checked':''} onchange="toggleCatFilter('${c.id}')"
+                 class="w-4 h-4 rounded accent-[#C8FF3D] bg-vault-800 border-white/20 cursor-pointer">
+          ${c.name}
+        </label>`).join('')}
+    </div>
+  </div>
+  <div>
+    <p class="text-xs font-extrabold tracking-[.2em] text-white/80 mb-4">MAX PRICE: <span class="text-lime" id="priceLabel">${fmt(f.maxPrice)}</span></p>
+    <input type="range" min="500" max="3000" step="100" value="${f.maxPrice}" oninput="setMaxPrice(this.value)"
+           class="w-full accent-[#C8FF3D] cursor-pointer">
+  </div>
+  <div>
+    <p class="text-xs font-extrabold tracking-[.2em] text-white/80 mb-4">RATING</p>
+    <div class="space-y-2.5">
+      ${[4,3,0].map(r=>`
+        <label class="flex items-center gap-3 text-sm text-white/60 cursor-pointer hover:text-white">
+          <input type="radio" name="rating" ${f.minRating===r?'checked':''} onchange="setMinRating(${r})" class="w-4 h-4 accent-[#C8FF3D] cursor-pointer">
+          ${r===0 ? 'All ratings' : `<span>${'★'.repeat(r)}<span class="text-white/20">${'★'.repeat(5-r)}</span></span> & up`}
+        </label>`).join('')}
+    </div>
+  </div>
+  <div>
+    <label class="flex items-center gap-3 text-sm text-white/60 cursor-pointer hover:text-white">
+      <input type="checkbox" ${f.inStock?'checked':''} onchange="toggleStockFilter()" class="w-4 h-4 accent-[#C8FF3D] cursor-pointer">
+      In stock only
+    </label>
+  </div>
+  <button onclick="resetFilters()" class="text-xs font-bold tracking-widest text-white/40 hover:text-lime transition-colors">RESET ALL</button>`;
+}
+function toggleCatFilter(id){ Store.filters.cats.has(id) ? Store.filters.cats.delete(id) : Store.filters.cats.add(id); syncFilterPanels(); renderShop(); }
+function setMaxPrice(v){ Store.filters.maxPrice = +v; renderShop(); syncFilterPanels(); }
+function setMinRating(r){ Store.filters.minRating = r; renderShop(); syncFilterPanels(); }
+function toggleStockFilter(){ Store.filters.inStock = !Store.filters.inStock; renderShop(); syncFilterPanels(); }
+function resetFilters(){ Store.filters = { cats:new Set(), maxPrice:3000, minRating:0, inStock:false }; renderShop(); syncFilterPanels(); }
+function syncFilterPanels(){
+  const html = filterPanelHTML();
+  document.getElementById('filterPanel').innerHTML = html;
+  document.getElementById('filterPanelMobile').innerHTML = html;
+}
+function applyFilters(list){
+  const f = Store.filters;
+  let out = list.filter(p => p.price <= f.maxPrice && p.rating >= f.minRating);
+  if (f.cats.size) out = out.filter(p => f.cats.has(p.cat));
+  if (f.inStock) out = out.filter(p => p.stock > 0);
+  return out;
+}
+function sortList(list, mode){
+  const arr = [...list];
+  switch(mode){
+    case 'price-asc': return arr.sort((a,b)=>a.price-b.price);
+    case 'price-desc': return arr.sort((a,b)=>b.price-a.price);
+    case 'rating': return arr.sort((a,b)=>b.rating-a.rating || b.reviews-a.reviews);
+    case 'newest': return arr.sort((a,b)=>(b.badge==='NEW')-(a.badge==='NEW'));
+    default: return arr.sort((a,b)=>b.reviews-a.reviews);
+  }
+}
+function renderShop(){
+  const sorted = sortList(applyFilters(PRODUCTS), document.getElementById('shopSort').value);
+  document.getElementById('shopGrid').innerHTML = sorted.map(p=>productCard(p)).join('');
+  document.getElementById('shopCount').textContent = `${sorted.length} PRODUCT${sorted.length!==1?'S':''}`;
+  document.getElementById('shopEmpty').classList.toggle('hidden', sorted.length>0);
+}
+function showShop(catId){
+  if (catId){ Store.filters.cats = new Set([catId]); } else if (!arguments.length) { /* keep filters */ }
+  setPage('shop');
+  syncFilterPanels(); renderShop();
+}
+function toggleFilterDrawer(){
+  const d = document.getElementById('filterDrawer'), p = document.getElementById('filterDrawerPanel');
+  if (d.classList.contains('hidden')){ d.classList.remove('hidden'); requestAnimationFrame(()=>{ p.style.transform='translateX(0)'; }); document.body.style.overflow='hidden'; }
+  else { p.style.transform='translateX(100%)'; setTimeout(()=>{ d.classList.add('hidden'); }, 450); document.body.style.overflow=''; }
+}
+
+/* ---------------- PRODUCT PAGE ---------------- */
+function openProduct(id){
+  const p = P(id); if(!p) return;
+  const d = discount(p);
+  document.getElementById('productDetail').innerHTML = `
+  <div class="flex items-center gap-2 text-xs text-white/40 font-semibold mb-8">
+    <a href="#" onclick="goHome();return false;" class="hover:text-lime">HOME</a><span>/</span>
+    <a href="#" onclick="showShop();return false;" class="hover:text-lime">SHOP</a><span>/</span>
+    <span class="text-white/80">${p.name}</span>
+  </div>
+  <div class="grid lg:grid-cols-2 gap-10 lg:gap-14">
+    <div>
+      <div class="rounded-2xl overflow-hidden border border-white/10 img-zoom bg-vault-800">
+        <img id="pdMainImg" src="${p.img}" alt="${p.name}" class="w-full aspect-square object-cover" onerror="this.onerror=null;this.src='${FALLBACK}'">
+      </div>
+      <div class="grid grid-cols-4 gap-3 mt-3">
+        ${[p.img, IMG.gym2, IMG.gym1, IMG.gym6].map((s,i)=>`
+          <button onclick="document.getElementById('pdMainImg').src='${s}'" class="rounded-xl overflow-hidden border ${i===0?'border-lime/60':'border-white/10'} hover:border-lime/60 transition-colors aspect-square">
+            <img src="${s}" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='${FALLBACK}'" alt="view ${i+1}">
+          </button>`).join('')}
+      </div>
+    </div>
+    <div>
+      <div class="flex items-center gap-3">
+        <p class="badge text-lime uppercase">${catName(p.cat)}</p>
+        ${p.badge?`<span class="badge bg-lime text-vault-950 rounded-md px-2 py-1">${p.badge}</span>`:''}
+      </div>
+      <h1 class="font-display text-4xl sm:text-6xl mt-3 leading-[.95]">${p.name.toUpperCase()}</h1>
+      <div class="flex items-center gap-2 mt-4 text-sm">
+        <span class="text-base">${stars(p.rating)}</span>
+        <span class="text-white/40">${p.rating}.0 · ${p.reviews} reviews</span>
+      </div>
+      <div class="flex items-baseline gap-3 mt-5">
+        <span class="font-display text-5xl text-lime">${fmt(p.price)}</span>
+        ${p.was?`<span class="text-white/30 line-through text-lg">${fmt(p.was)}</span>
+        <span class="badge bg-red-500 text-white rounded-md px-2 py-1">SAVE ${d}%</span>`:''}
+      </div>
+      <p class="text-white/55 mt-5 leading-relaxed">${p.desc}</p>
+
+      <div class="mt-7">
+        <p class="text-xs font-extrabold tracking-[.2em] text-white/80 mb-3">COLOR</p>
+        <div class="flex gap-3">
+          ${p.colors.map((c,i)=>`<button onclick="pickColor(this)" class="pd-color w-9 h-9 rounded-full border-2 ${i===0?'border-lime':'border-white/20'} transition-all" style="background:${c}"></button>`).join('')}
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4 mt-8">
+        <div class="flex items-center border border-white/15 rounded-xl overflow-hidden">
+          <button onclick="pdQty(-1)" class="w-11 h-12 hover:bg-vault-800 text-lg font-bold">−</button>
+          <span id="pdQty" class="w-12 text-center font-bold">1</span>
+          <button onclick="pdQty(1)" class="w-11 h-12 hover:bg-vault-800 text-lg font-bold">+</button>
+        </div>
+        <button onclick="addToCart(${p.id}, +document.getElementById('pdQty').textContent)" class="btn-primary rounded-xl px-8 h-12 text-sm flex-1 min-w-[160px]">ADD TO CART</button>
+        <button onclick="buyNow(${p.id})" class="btn-ghost rounded-xl px-8 h-12 text-sm font-bold tracking-widest text-lime border-lime/40 flex-1 min-w-[160px] hover:bg-lime/10">BUY NOW</button>
+      </div>
+
+      <div class="mt-6 flex items-center gap-3 bg-vault-800/60 border border-white/5 rounded-xl px-5 py-4">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="2" stroke-linecap="round"><path d="M3 7h11v8H3zM14 10h4l3 3v2h-7"/><circle cx="7.5" cy="17.5" r="1.8"/><circle cx="17.5" cy="17.5" r="1.8"/></svg>
+        <p class="text-xs text-white/60">Delivery estimate: <span class="text-white font-bold">2–4 days</span> · Kathmandu Valley · <span class="text-lime font-bold">${p.stock} in stock</span></p>
+      </div>
+
+      <div class="mt-9">
+        <p class="text-xs font-extrabold tracking-[.2em] text-white/80 mb-4">KEY FEATURES</p>
+        <ul class="grid sm:grid-cols-2 gap-2.5">
+          ${p.features.map(f=>`<li class="flex items-start gap-2.5 text-sm text-white/60">
+            <svg class="mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C8FF3D" stroke-width="3" stroke-linecap="round"><path d="m4 12 5 5L20 6"/></svg>${f}</li>`).join('')}
+        </ul>
+      </div>
+
+      <div class="mt-9">
+        <p class="text-xs font-extrabold tracking-[.2em] text-white/80 mb-4">SPECIFICATIONS</p>
+        <div class="rounded-xl border border-white/5 divide-y divide-white/5">
+          ${Object.entries(p.specs).map(([k,v])=>`
+            <div class="flex justify-between px-5 py-3.5 text-sm"><span class="text-white/40">${k}</span><span class="font-semibold text-right">${v}</span></div>`).join('')}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-16">
+    <h2 class="font-display text-4xl mb-8">CUSTOMER <span class="text-lime">REVIEWS</span></h2>
+    <div class="grid md:grid-cols-3 gap-4">
+      ${[
+        {n:'Sandeep', r:p.rating, t:'Exactly as described. Quality feels premium for the price point.'},
+        {n:'Anish', r:5, t:'Shipping was fast and packaging was solid. Would buy again.'},
+        {n:'Pratiksha', r:4, t:'Great value. Took one session to break in, now it\u2019s perfect.'}
+      ].map(x=>`
+      <div class="bg-vault-800/50 border border-white/5 rounded-2xl p-6">
+        <div class="text-sm">${stars(x.r)}</div>
+        <p class="text-white/60 text-sm mt-3">"${x.t}"</p>
+        <div class="mt-4 flex items-center justify-between">
+          <p class="font-bold text-sm">${x.n}</p>
+          <span class="badge bg-lime/10 border border-lime/30 text-lime rounded-md px-2 py-1">VERIFIED PURCHASE</span>
+        </div>
+      </div>`).join('')}
+    </div>
+  </div>`;
+  const related = PRODUCTS.filter(x=>x.id!==id && x.cat===p.cat).concat(PRODUCTS.filter(x=>x.id!==id && x.cat!==p.cat)).slice(0,4);
+  document.getElementById('relatedGrid').innerHTML = related.map(x=>productCard(x)).join('');
+  setPage('product');
+}
+function pickColor(btn){
+  btn.parentElement.querySelectorAll('.pd-color').forEach(b=>b.classList.replace('border-lime','border-white/20'));
+  btn.classList.replace('border-white/20','border-lime');
+}
+function pdQty(d){
+  const el = document.getElementById('pdQty');
+  el.textContent = Math.max(1, +el.textContent + d);
+}
+function buyNow(id){ addToCart(id, +document.getElementById('pdQty').textContent, true); openCart(); }
+
+/* ---------------- SEARCH ---------------- */
+function openSearch(){
+  document.getElementById('searchOverlay').classList.remove('hidden');
+  document.body.style.overflow='hidden';
+  renderSearchCatChips(); renderSearch();
+  setTimeout(()=>document.getElementById('searchInput').focus(), 60);
+}
+function closeSearch(){
+  document.getElementById('searchOverlay').classList.add('hidden');
+  document.body.style.overflow='';
+}
+function renderSearchCatChips(){
+  const cats = [{id:'all', name:'ALL'}, ...CATEGORIES];
+  document.getElementById('searchCatChips').innerHTML = cats.map(c=>`
+    <button onclick="Store.searchCat='${c.id}';renderSearchCatChips();renderSearch()"
+            class="rounded-full px-4 py-2 text-[11px] font-extrabold tracking-widest border transition-colors ${Store.searchCat===c.id?'bg-lime text-vault-950 border-lime':'border-white/15 text-white/60 hover:border-lime/50 hover:text-lime'}">${c.name.toUpperCase()}</button>`).join('');
+}
+function renderSearch(){
+  const q = document.getElementById('searchInput').value.trim().toLowerCase();
+  let list = PRODUCTS.filter(p => !q || p.name.toLowerCase().includes(q) || catName(p.cat).toLowerCase().includes(q));
+  if (Store.searchCat !== 'all') list = list.filter(p=>p.cat===Store.searchCat);
+  list = sortList(list, document.getElementById('searchSort').value);
+  document.getElementById('searchResults').innerHTML = list.map(p=>productCard(p)).join('');
+  document.getElementById('searchEmpty').classList.toggle('hidden', list.length>0);
+}
+
+/* ---------------- CART ---------------- */
+function addToCart(id, qty=1, silent=false){
+  const line = Store.cart.find(c=>c.id===id);
+  line ? line.qty += qty : Store.cart.push({id, qty});
+  updateCartUI(); refreshCardButtons();
+  if (!silent){ showToast(`${P(id).name} added to cart`); openCart(); }
+}
+function removeFromCart(id){ Store.cart = Store.cart.filter(c=>c.id!==id); updateCartUI(); refreshCardButtons(); }
+function setQty(id, delta){
+  const line = Store.cart.find(c=>c.id===id); if(!line) return;
+  line.qty += delta;
+  if (line.qty <= 0) Store.cart = Store.cart.filter(c=>c.id!==id);
+  updateCartUI(); refreshCardButtons();
+}
+function cartTotal(){ return Store.cart.reduce((s,c)=>s + P(c.id).price*c.qty, 0); }
+function updateCartUI(){
+  const count = Store.cart.reduce((s,c)=>s+c.qty, 0);
+  const badge = document.getElementById('cartCount');
+  badge.textContent = count; badge.classList.toggle('hidden', !count); badge.classList.toggle('flex', !!count);
+  document.getElementById('cartDrawerCount').textContent = count ? `(${count})` : '';
+  const wrap = document.getElementById('cartItems');
+  if (!Store.cart.length){
+    wrap.innerHTML = `<div class="text-center pt-20">
+      <p class="font-display text-3xl text-white/30">CART IS EMPTY</p>
+      <p class="text-white/40 text-sm mt-2">Time to load the bar.</p>
+      <button onclick="closeCart();showShop();" class="btn-primary rounded-xl px-8 py-3.5 text-xs mt-8">START SHOPPING</button></div>`;
+  } else {
+    wrap.innerHTML = Store.cart.map(c=>{ const p = P(c.id); return `
+      <div class="flex gap-4 bg-vault-800/50 border border-white/5 rounded-xl p-3">
+        <img src="${p.img}" class="w-20 h-24 object-cover rounded-lg cursor-pointer" onclick="openProduct(${p.id})" onerror="this.onerror=null;this.src='${FALLBACK}'" alt="${p.name}">
+        <div class="flex-1 min-w-0">
+          <div class="flex justify-between gap-2">
+            <p class="font-bold text-sm leading-snug">${p.name}</p>
+            <button onclick="removeFromCart(${p.id})" class="text-white/35 hover:text-red-400 transition-colors shrink-0" aria-label="Remove">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M9 7V5h6v2m-8 0 1 13h8l1-13"/></svg>
+            </button>
+          </div>
+          <p class="text-[11px] text-white/35 mt-0.5">${fmt(p.price)} each</p>
+          <div class="flex items-center justify-between mt-2.5">
+            <div class="flex items-center border border-white/15 rounded-lg">
+              <button onclick="setQty(${p.id},-1)" class="w-8 h-8 hover:text-lime font-bold">−</button>
+              <span class="w-8 text-center text-sm font-bold">${c.qty}</span>
+              <button onclick="setQty(${p.id},1)" class="w-8 h-8 hover:text-lime font-bold">+</button>
+            </div>
+            <span class="font-extrabold text-sm">${fmt(p.price*c.qty)}</span>
+          </div>
+        </div>
+      </div>`;}).join('');
+  }
+  const sub = cartTotal();
+  const ship = sub === 0 ? 0 : (sub >= 3000 ? 0 : 150);
+  document.getElementById('cartSubtotal').textContent = fmt(sub);
+  document.getElementById('cartShipping').textContent = ship === 0 ? (sub>0?'FREE':'—') : fmt(ship);
+  document.getElementById('cartTotal').textContent = fmt(sub + ship);
+}
+function refreshCardButtons(){
+  if (Store.page==='home'){ renderBestSellers(); renderNewArrivals(); }
+  if (Store.page==='shop') renderShop();
+}
+function openCart(){
+  updateCartUI();
+  const o = document.getElementById('cartOverlay'), d = document.getElementById('cartDrawer'), bg = document.getElementById('cartOverlayBg');
+  o.classList.remove('hidden');
+  requestAnimationFrame(()=>{ d.style.transform='translateX(0)'; bg.style.opacity='1'; });
+  document.body.style.overflow='hidden';
+}
+function closeCart(){
+  const d = document.getElementById('cartDrawer'), bg = document.getElementById('cartOverlayBg');
+  d.style.transform='translateX(100%)'; bg.style.opacity='0';
+  setTimeout(()=>{ document.getElementById('cartOverlay').classList.add('hidden'); }, 450);
+  document.body.style.overflow='';
+}
+
+/* ---------------- WISHLIST ---------------- */
+function toggleWish(id, btn){
+  Store.wishlist.has(id) ? Store.wishlist.delete(id) : Store.wishlist.add(id);
+  btn.classList.toggle('active');
+  const w = document.getElementById('wishCount');
+  w.textContent = Store.wishlist.size;
+  w.classList.toggle('hidden', !Store.wishlist.size); w.classList.toggle('flex', !!Store.wishlist.size);
+  showToast(Store.wishlist.has(id) ? 'Saved to wishlist' : 'Removed from wishlist');
+}
+function openWishlistInfo(){ showToast(Store.wishlist.size ? `${Store.wishlist.size} item(s) in your wishlist` : 'Wishlist is empty — tap a heart to save gear'); }
+
+/* ---------------- NAV / PAGES ---------------- */
+function setPage(name){
+  Store.page = name;
+  ['home','shop','product'].forEach(p=>document.getElementById('page-'+p).classList.toggle('hidden', p!==name));
+  window.scrollTo({top:0, behavior:'instant'});
+  observeReveals();
+}
+function goHome(){ setPage('home'); }
+function openMobileMenu(){
+  const m = document.getElementById('mobileMenu'), p = document.getElementById('mobileMenuPanel');
+  m.classList.remove('hidden');
+  requestAnimationFrame(()=>{ p.style.transform='translateX(0)'; });
+  document.body.style.overflow='hidden';
+}
+function closeMobileMenu(){
+  const m = document.getElementById('mobileMenu'), p = document.getElementById('mobileMenuPanel');
+  p.style.transform='translateX(-100%)';
+  setTimeout(()=>{ m.classList.add('hidden'); }, 450);
+  document.body.style.overflow='';
+}
+document.getElementById('hamburgerBtn').addEventListener('click', openMobileMenu);
+
+/* ---------------- COUNTDOWN ---------------- */
+setInterval(()=>{
+  let s = Math.max(0, Math.floor((Store.dealEnd - Date.now())/1000));
+  const h = String(Math.floor(s/3600)).padStart(2,'0');
+  const m = String(Math.floor(s%3600/60)).padStart(2,'0');
+  const sec = String(s%60).padStart(2,'0');
+  cdH.textContent=h; cdM.textContent=m; cdS.textContent=sec;
+}, 1000);
+
+/* ---------------- SCROLL REVEAL ---------------- */
+let observer;
+function observeReveals(){
+  observer && observer.disconnect();
+  observer = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); observer.unobserve(e.target);} }), {threshold:.12});
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>observer.observe(el));
+}
+
+/* ---------------- NEWSLETTER ---------------- */
+document.getElementById('newsletterForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const em = document.getElementById('newsletterEmail').value;
+  document.getElementById('newsletterMsg').textContent = `Welcome to the grind, ${em.split('@')[0].toUpperCase()} — you're on the list.`;
+  document.getElementById('newsletterEmail').value = '';
+  showToast('Subscribed successfully');
+});
+
+/* keyboard: Esc closes overlays */
+document.addEventListener('keydown', e=>{
+  if (e.key === 'Escape'){ closeSearch(); closeCart(); closeMobileMenu(); }
+});
+
+/* ---------------- INIT ---------------- */
+renderCategories(); renderBestSellers(); renderFlash(); renderGoals(); renderWhy();
+renderNewArrivals(); renderReviews(); renderInsta(); syncFilterPanels(); updateCartUI(); observeReveals();
+</script>
+</body>
+</html>
